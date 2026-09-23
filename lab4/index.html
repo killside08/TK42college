@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,11 +56,21 @@
 
                     <div>
                         <label for="gender">Стать:</label>
-                        <select id="gender" name="gender">
-                            <option value="male">Чоловік</option>
-                            <option value="female">Жінка</option>
-                            <option value="other">Інше</option>
-                        </select>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Чоловік</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Жінка</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Інше</label>
+                    </div>
+
+                    <div>
+                        <label for="languages">Мови:</label>
+                        <input type="checkbox" id="languages" name="languages" value="english">Англійська
+                        <input type="checkbox" id="languages" name="languages" value="spanish">Іспанська
+                        <input type="checkbox" id="languages" name="languages" value="french">Французька
+                        <input type="checkbox" id="languages" name="languages" value="ukrainian">Українська
+                        <input type="checkbox" id="languages" name="languages" value="german">Німецька
                     </div>
 
                     <div>
@@ -63,31 +78,57 @@
                         <input type="text" id="country" name="country">
                     </div>
 
+                </fieldset>
+
+                <h2>Навчальні предмети</h2>
+
+                <fieldset>
+                    <legend>Вибери навчальні предмети</legend>
+
                     <div>
                         <label for="subjects">Навчальні предмети:</label>
-                        <select id="subjects" name="subjects">
+                        <br>
+                        <select multiple id="subjects" name="subjects">
                             <option value="math">Математика</option>
                             <option value="physics">Фізика</option>
                             <option value="chemistry">Хімія</option>
-                            <option value="programming">Програмування</option>
-                            <option value="english">Англійська</option>
+                            <option value="biology">Біологія</option>
+                            <option value="history">Історія</option>
+                            <option value="geography">Географія</option>
                         </select>
+                        
                     </div>
+
+                    <div>
+                        <label for="range">Оціни інтерес в комп'ютерних науках:</label>
+                        <input type="range" id="range" name="range">
+                    </div>
+
                 </fieldset>
 
-                <label for="textarea">Опис навичок:</label>
-                <textarea id="textarea" name="textarea"></textarea>
+                <h2>Додаткова інформація</h2>
+                <fieldset>
+                    <legend>Опишіть свої навички</legend>
+                    <div>
+                        <label for="textarea">Опис навичок:</label>
+                        <textarea id="textarea" name="textarea"></textarea>
+                    </div>
 
-                <label for="file">Файл:</label>
-                <input type="file" id="file" name="file">
+                    <div>
+                        <label for="file">Файл:</label>
+                        <input type="file" id="file" name="file">
+                    </div>
+                    <label for="color">Улюблений колір:</label>
+                    <input type="color" id="color" name="color">
 
-                <label for="color">Улюблений колір:</label>
-                <input type="color" id="color" name="color">
-
-                <label for="time">Час навчання:</label>
-                <input type="time" id="time" name="time">
-
-                <button type="submit">Відправити</button>
+                    <div>
+                        <label for="time">Час навчання:</label>
+                        <input type="time" id="time" name="time">
+                    </div>
+                    <div>
+                        <button type="submit">Відправити</button>
+                    </div>
+                </fieldset>
             </form>
         </section>
     </main>
