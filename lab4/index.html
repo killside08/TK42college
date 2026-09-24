@@ -19,34 +19,35 @@
 
     <main>
         <section>
-            <form action="." method="post">
+            <form action="." method="post" enctype="multipart/form-data">
                 <h2>Персональна інформація</h2>
                 <fieldset>
                     <legend>Основна інформація</legend>
 
                     <div>
                         <label for="name">Ім'я:</label>
-                        <input type="text" id="name" name="name">
+                        <input type="text" id="name" name="name" required>
+                        
                     </div>
 
                     <div>
                         <label for="surname">Прізвище:</label>
-                        <input type="text" id="surname" name="surname">
+                        <input type="text" id="surname" name="surname" required>
                     </div>
 
                     <div>
                         <label for="email">Електронна пошта:</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
                     </div>
 
                     <div>
                         <label for="password">Пароль:</label>
-                        <input type="password" id="password" name="password">
+                        <input type="password" id="password" name="password" required>
                     </div>
 
                     <div>
                         <label for="age">Вік:</label>
-                        <input type="number" id="age" name="age">
+                        <input type="number" id="age" name="age" min="0" max="120" required>
                     </div>
 
                     <div>
@@ -66,16 +67,22 @@
 
                     <div>
                         <label for="languages">Мови:</label>
-                        <input type="checkbox" id="languages" name="languages" value="english">Англійська
-                        <input type="checkbox" id="languages" name="languages" value="spanish">Іспанська
-                        <input type="checkbox" id="languages" name="languages" value="french">Французька
-                        <input type="checkbox" id="languages" name="languages" value="ukrainian">Українська
-                        <input type="checkbox" id="languages" name="languages" value="german">Німецька
+                        <input type="checkbox" id="languages1" name="languages" value="english"><label for="languages1">Англійська </label>
+                        <input type="checkbox" id="languages2" name="languages" value="spanish"><label for="languages2">Іспанська </label>
+                        <input type="checkbox" id="languages3" name="languages" value="french"><label for="languages3">Французька </label>
+                        <input type="checkbox" id="languages4" name="languages" value="ukrainian"><label for="languages4">Українська </label>
+                        <input type="checkbox" id="languages5" name="languages" value="german"><label for="languages5">Німецька </label>
                     </div>
 
                     <div>
                         <label for="country">Країна:</label>
-                        <input type="text" id="country" name="country">
+                        <select id="country" name="country" required>
+                            <option value="">Виберіть країну</option>
+                            <option value="ukraine">Україна</option>
+                            <option value="usa">США</option>
+                            <option value="canada">Канада</option>
+                            <option value="uk">Великобританія</option>
+                        </select>
                     </div>
 
                 </fieldset>
