@@ -24,6 +24,41 @@
 
     </nav>
 
+    <main class="forms-container">
+
+        <section class="form-section">
+            <h2>Написати нам повідомлення</h2>
+            <form action="#" method="post" class="custom-form">
+
+                <div class="form-group">
+                    <label for="username">Ваше ім'я:</label>
+                    <input type="text" id="username" name="username" placeholder="Іван Іваненко" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="useremail">Електронна пошта:</label>
+                    <input type="email" id="useremail" name="useremail" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Тема повідомлення:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Співпраця / Порада" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Ваше повідомлення:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Напишіть ваш текст тут..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Надіслати повідомлення</button>
+            </form>
+        </section>
+
+        <footer>
+            &copy;Copyright 2026 by Maksym M. All right reserved.
+        </footer>
+
 </body>
 
 </html>

@@ -24,15 +24,30 @@
 
         </nav>
 
-    <form action="subscribe" method="post">
-        <label for="email">Пошта:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="subscribe">
-            <input type="checkbox" id="subscribe" name="subscribe" value="yes" required>
-            Підписатися на розсилку
-        </label>
-        <button type="submit">Підписатися</button>
-    </form>
+        <section class="form-section">
+            <h2>Підписка на оновлення блогу</h2>
+            <form action="#" method="post" class="custom-form">
+                
+                <div class="form-group">
+                    <label for="newsletter-email">Ваш Email для розсилки:</label>
+                    <input type="email" id="newsletter-email" name="newsletter-email" placeholder="name@domain.com" required>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Я погоджуюся на отримання щотижневої розсилки новин про подорожі.</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Підписатися</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy;Copyright 2026 by Maksym M. All right reserved.
+    </footer>
+
 </body>
 
 </html>
