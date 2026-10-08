@@ -1,167 +1,103 @@
-/* ==========================================================================
-   Базові налаштування (Reset & Box Sizing)
-   ========================================================================== */
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1.6rem; /* 16px */
-  line-height: 1.42857143;
-  color: #333333;
-  background-color: #ffffff;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
-/* ==========================================================================
-   Структура та Блочна Модель Header
-   ========================================================================== */
-header, article, aside, details, figcaption, figure, footer, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-#hero_container {
-  display: block;
-  width: 100%;
-  position: relative;
-}
-
-/* Контейнери Bootstrap */
-.container, .container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.container {
-  max-width: 1170px;
-}
-
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.row::before, .row::after, .clearfix::before, .clearfix::after {
-  content: " ";
-  display: table;
-}
-
-.row::after, .clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   Блок Новини (#hero)
-   ========================================================================== */
+/* Hero Banner */
 #hero {
   position: relative;
   min-height: 380px;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 30px;
-  background-color: rgb(46, 49, 146);
-  background-repeat: no-repeat;
-  background-position: center top;
+  padding: 30px;
+  background: #1d2159 url('https://lpnu.ua/sites/default/files/styles/hero/public/2026/10/3/news/37814/znimok-ekrana-2026-10-03-223810.png?itok=f-rkRipX') no-repeat center top;
   background-size: cover;
   color: #ffffff;
 }
 
 #hero .shadow {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 100%);
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.85) 100%);
   z-index: 1;
 }
 
 #hero .container {
   position: relative;
   z-index: 2;
-}
-
-#hero h2 {
-  margin: 0;
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.3;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 #hero h2 a {
   color: #ffffff;
+  font-size: 24px;
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
+  font-weight: bold;
 }
 
 #hero h2 a:hover {
-  color: #e0e0e0;
   text-decoration: underline;
 }
 
-/* ==========================================================================
-   Блок Швидких Посилань (#block-lpnushortcutstop4)
-   ========================================================================== */
+/* Синя навігаційна смуга */
 #block-lpnushortcutstop4 {
-  background-color: #1e2460; /* Темно-синій фірмовий колір НУ "ЛП" */
-  padding: 15px 0;
+  background-color: #272c7d;
+  width: 100%;
 }
 
-#block-lpnushortcutstop4 a {
-  text-decoration: none;
+.shortcuts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.shortcut-item {
+  flex: 1 1 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
   color: #ffffff;
-  display: block;
-}
-
-#block-lpnushortcutstop4 [class*="shortcut-"] {
-  padding: 12px 15px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  text-decoration: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.2s ease;
 }
 
-#block-lpnushortcutstop4 [class*="shortcut-"]:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.shortcut-item:last-child {
+  border-right: none;
 }
 
-#block-lpnushortcutstop4 h2 {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 500;
+.shortcut-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.shortcut-content {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
   color: #ffffff;
 }
 
-#block-lpnushortcutstop4 svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
+/* Налаштування кольору та розміру 24px для іконок */
+.shortcut-content svg {
+  fill: #00b0f0 !important;
+  color: #00b0f0 !important;
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
   flex-shrink: 0;
-}
-
-/* Сітка Bootstrap (колонки) */
-.col-xs-6 {
-  float: left;
-  width: 50%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-@media (min-width: 768px) {
-  .col-sm-3 {
-    width: 25%;
-  }
+  display: inline-block;
 }
