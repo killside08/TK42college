@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body, h1, h2, h3, p, ul, li, figure, figcaption {
     margin: 10px;
     padding: 0;
@@ -146,7 +152,23 @@ footer p {
     margin: 10px 0;
 }
 
-footer a {
+footer > a {
     color: #fff;
-    text-decoration: underline; /* Consider removing underline if using buttons for CTA */
+    text-decoration: none; /* Consider removing underline if using buttons for CTA */
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline; /* Gold color for active link */
+}
+
+[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #FFD700; /* Gold color on hover */
 }
