@@ -1,31 +1,80 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 body {
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   background-color: #f4f4f4;
+  font-size: 1.6rem;
+}
+
+.btn-group-vertical>.btn-group:after,
+.btn-group-vertical>.btn-group:before,
+.btn-toolbar:after,
+.btn-toolbar:before,
+.clearfix:after,
+.clearfix:before,
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.dl-horizontal dd:after,
+.dl-horizontal dd:before,
+.form-horizontal .form-group:after,
+.form-horizontal .form-group:before,
+.modal-footer:after,
+.modal-footer:before,
+.modal-header:after,
+.modal-header:before,
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before,
+.pager:after,
+.pager:before,
+.panel-body:after,
+.panel-body:before,
+.row:after,
+.row:before {
+  display: table;
+  content: " ";
 }
 
 /* Hero Banner */
 #hero {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: normal;
   position: relative;
   min-height: 380px;
   display: flex;
   align-items: flex-end;
   padding: 30px;
-  background: #1d2159 url('https://lpnu.ua/sites/default/files/styles/hero/public/2026/10/3/news/37814/znimok-ekrana-2026-10-03-223810.png?itok=f-rkRipX') no-repeat center top;
+  background: #1d2159 url('../photo/znimok-ekrana-2026-10-03-223810.png') no-repeat center top;
   background-size: cover;
   color: #ffffff;
 }
 
-#hero .shadow {
+.shadow {
+  min-height: 350px;
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.85) 100%);
-  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(46, 49, 146, 0), rgba(46, 49, 146, 1));
 }
 
 #hero .container {
@@ -36,11 +85,19 @@ body {
   width: 100%;
 }
 
-#hero h2 a {
-  color: #ffffff;
-  font-size: 24px;
-  text-decoration: none;
-  font-weight: bold;
+#hero h2 {
+    margin: 0 0 6.5rem 0;
+    font-size: 5rem;
+}
+
+#hero a:link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 3s ease-out;
+}
+
+a {
+    background-color: transparent;
 }
 
 #hero h2 a:hover {
@@ -49,8 +106,67 @@ body {
 
 /* Синя навігаційна смуга */
 #block-lpnushortcutstop4 {
-  background-color: #272c7d;
-  width: 100%;
+    background: rgb(46,49,146);
+}
+
+#block-lpnushortcutstop4:before {
+    width: 100%;
+    content: "";
+    height: 2px;
+    background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0%,#2E3192),color-stop(50%,#fff),color-stop(100%,#2E3192));
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#block-lpnushortcutstop4 a:link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 3s ease-out;
+}
+
+#block-lpnushortcutstop4 .col-xs-6 {
+    min-height: 120px;
+}
+
+#block-lpnushortcutstop4 h2 {
+    font-size: 2.2rem;
+}
+
+#block-lpnushortcutstop4 h2 svg {
+    color: #00A1E4;
+    margin-right: 0.5rem;
+}
+
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+#block-lpnushortcutstop4 h2 {
+    font-size: 2.2rem;
+}
+
+#block-lpnushortcutstop4 .col-xs-6 {
+    min-height: 120px;
+}
+
+#block-lpnushortcutstop4 h2 {
+    font-size: 2.2rem;
+}
+
+
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
 }
 
 .shortcuts-wrapper {
