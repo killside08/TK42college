@@ -11,6 +11,7 @@ body {
 
 /* Hero Banner */
 #hero {
+  font-weight: normal;
   position: relative;
   min-height: 420px;
   display: flex;
