@@ -1,80 +1,32 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
-  font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 body {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #f4f4f4;
-  font-size: 1.6rem;
-}
-
-.btn-group-vertical>.btn-group:after,
-.btn-group-vertical>.btn-group:before,
-.btn-toolbar:after,
-.btn-toolbar:before,
-.clearfix:after,
-.clearfix:before,
-.container-fluid:after,
-.container-fluid:before,
-.container:after,
-.container:before,
-.dl-horizontal dd:after,
-.dl-horizontal dd:before,
-.form-horizontal .form-group:after,
-.form-horizontal .form-group:before,
-.modal-footer:after,
-.modal-footer:before,
-.modal-header:after,
-.modal-header:before,
-.nav:after,
-.nav:before,
-.navbar-collapse:after,
-.navbar-collapse:before,
-.navbar-header:after,
-.navbar-header:before,
-.navbar:after,
-.navbar:before,
-.pager:after,
-.pager:before,
-.panel-body:after,
-.panel-body:before,
-.row:after,
-.row:before {
-  display: table;
-  content: " ";
 }
 
 /* Hero Banner */
 #hero {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
   font-weight: normal;
   position: relative;
-  min-height: 380px;
+  min-height: 420px;
   display: flex;
   align-items: flex-end;
-  padding: 30px;
-  background: #1d2159 url('../photo/znimok-ekrana-2026-10-03-223810.png') no-repeat center top;
+  padding: 35px 0;
+  background: #1d2159 url('../photo/background.jpg') no-repeat center top;
   background-size: cover;
   color: #ffffff;
 }
 
-.shadow {
-  min-height: 350px;
+#hero .shadow {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(46, 49, 146, 0), rgba(46, 49, 146, 1));
+  inset: 0;
+  background: linear-gradient(180deg, rgba(1, 105, 252, 0) 25%, rgba(0, 38, 255, 0.85) 100%);
+  z-index: 1;
 }
 
 #hero .container {
@@ -83,21 +35,16 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 30px;
 }
 
-#hero h2 {
-    margin: 0 0 6.5rem 0;
-    font-size: 5rem;
-}
-
-#hero a:link {
-    color: #fff;
-    text-decoration: none;
-    transition: color 3s ease-out;
-}
-
-a {
-    background-color: transparent;
+#hero h2 a {
+  color: #ffffff;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1.35;
+  display: inline-block;
 }
 
 #hero h2 a:hover {
@@ -106,81 +53,24 @@ a {
 
 /* Синя навігаційна смуга */
 #block-lpnushortcutstop4 {
-    background: rgb(46,49,146);
-}
-
-#block-lpnushortcutstop4:before {
-    width: 100%;
-    content: "";
-    height: 2px;
-    background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0%,#2E3192),color-stop(50%,#fff),color-stop(100%,#2E3192));
-}
-
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-#block-lpnushortcutstop4 a:link {
-    color: #fff;
-    text-decoration: none;
-    transition: color 3s ease-out;
-}
-
-#block-lpnushortcutstop4 .col-xs-6 {
-    min-height: 120px;
-}
-
-#block-lpnushortcutstop4 h2 {
-    font-size: 2.2rem;
-}
-
-#block-lpnushortcutstop4 h2 svg {
-    color: #00A1E4;
-    margin-right: 0.5rem;
-}
-
-:not(svg) {
-    transform-origin: 0px 0px;
-}
-
-#block-lpnushortcutstop4 h2 {
-    font-size: 2.2rem;
-}
-
-#block-lpnushortcutstop4 .col-xs-6 {
-    min-height: 120px;
-}
-
-#block-lpnushortcutstop4 h2 {
-    font-size: 2.2rem;
-}
-
-
-
-svg:not(:root).svg-inline--fa {
-    overflow: visible;
+  background-color: #272c7d;
+  width: 100%;
 }
 
 .shortcuts-wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .shortcut-item {
-  flex: 1 1 200px;
+  flex: 1 1 240px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 15px;
+  padding: 24px 15px;
   color: #ffffff;
   text-decoration: none;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -198,15 +88,17 @@ svg:not(:root).svg-inline--fa {
 .shortcut-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  text-align: center;
+  justify-content: flex-start;
+  gap: 14px;
+  text-align: left;
   font-size: 15px;
   font-weight: 500;
   color: #ffffff;
+  width: 100%;
+  max-width: 270px;
 }
 
-/* Налаштування кольору та розміру 24px для іконок */
+/* Налаштування кольору та розміру іконок */
 .shortcut-content svg {
   fill: #00b0f0 !important;
   color: #00b0f0 !important;
@@ -216,4 +108,12 @@ svg:not(:root).svg-inline--fa {
   max-height: 24px !important;
   flex-shrink: 0;
   display: inline-block;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .shortcut-item {
+    flex: 1 1 50%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
