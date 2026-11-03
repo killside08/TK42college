@@ -6,16 +6,15 @@
 }
 
 body {
-  /* Основний шрифт за замовчуванням — Poppins */
   font-family: 'Poppins', sans-serif;
   color: #2D2D2D;
   background-color: #FFFFFF;
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 100px; /* Внутрішні відступи по боках з Figma */
 }
 
 a {
@@ -96,82 +95,110 @@ a {
   opacity: 0.9;
 }
 
-/* Hero Section */
+/* Header 1280px (Hero Section) */
 .hero-section {
-  background-color: #F8F8FC;
-  padding: 80px 0 100px;
+  background-color: #F7F5FD;
+  padding-top: 70px;
+  padding-bottom: 129px;
 }
 
 .hero-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 60px;
+  gap: 114px; /* Відстань між текстом та песиками */
 }
 
 .hero-content {
-  max-width: 480px;
+  width: 466px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero-text-block {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-title {
   font-family: 'Mozilla Headline', 'Poppins', sans-serif;
-  font-size: 68px;
-  font-weight: 700;
-  line-height: 1.08;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 90px;
   color: #2D2D2D;
   margin-bottom: 24px;
 }
 
 .hero-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  color: #777777;
-  line-height: 1.5;
-  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: rgba(45, 45, 45, 0.5);
 }
 
 .btn-get-started {
-  display: inline-block;
-  background-color: #F4D068;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 203px;
+  height: 64px;
+  background-color: #F8D57E;
   color: #2D2D2D;
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  padding: 16px 36px;
-  border-radius: 8px;
+  line-height: 32px;
+  border-radius: 10px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-get-started:hover {
+  opacity: 0.9;
 }
 
 .hero-image-wrapper {
-  max-width: 520px;
-  width: 100%;
+  width: 500px;
+  height: 460px;
+  flex-shrink: 0;
 }
 
 .hero-img {
   width: 100%;
-  height: auto;
-  border-radius: 16px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
   display: block;
 }
 
-/* Video Section */
+/* Video Section (Video 1280px) */
 .video-section {
-  background-color: #F2FBF9;
-  padding: 80px 0;
+  background-color: #F2FAF8;
+  padding: 70px 257px; /* Точні значення paddings з Figma */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .video-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .video-wrapper {
-  max-width: 720px;
-  width: 100%;
+  width: 765px;
+  height: 460px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .video-img {
   width: 100%;
-  height: auto;
-  border-radius: 16px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
   display: block;
 }
