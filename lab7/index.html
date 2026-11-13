@@ -1,244 +1,217 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Незабаром у Львівській політехніці</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #24296b;
-            color: #1a1a1a;
-            min-height: 100vh;
-            margin: 0;
-            padding: 40px 20px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Незабаром у Львівській політехніці</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Flexbox layout constraints and custom card styles */
-        .cards-flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1300px;
-            margin: 0 auto;
-            align-items: flex-start;
-        }
+    body {
+      background-color: #24296b;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #ffffff;
+      padding: 40px 20px 60px;
+      min-height: 100vh;
+    }
 
-        .event-card {
-            background-color: #f4f6f8;
-            width: 195px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            border-radius: 2px;
-            overflow: hidden;
-            height: auto;
-        }
+    .section-wrapper {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
 
-        .event-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-        }
+    .header-container {
+      text-align: center;
+      margin-bottom: 36px;
+    }
 
-        .card-image-wrapper {
-            width: 100%;
-            height: 120px;
-            overflow: hidden;
-            position: relative;
-            background-color: #ddd;
-            flex-shrink: 0;
-        }
+    .section-title {
+      display: inline-block;
+      font-size: 26px;
+      font-weight: 500;
+      color: #ffffff;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #ffffff;
+      letter-spacing: 0.3px;
+    }
 
-        .date-section {
-            padding: 14px 12px;
-            font-size: 13px;
-            line-height: 1.45;
-            color: #2b569a;
-            text-align: center;
-            font-weight: 500;
-            border-bottom: 1px dotted #b0c0d6;
-            background-color: #ffffff;
-            flex-shrink: 0;
-        }
+    .cards-flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+    }
 
-        .title-section {
-            padding: 14px 12px 18px 12px;
-            font-size: 13px;
-            line-height: 1.35;
-            color: #1a4a75;
-            font-weight: 600;
-            background-color: #f4f6f8;
-        }
+    .event-card {
+      background-color: #ffffff;
+      width: 196px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-        /* Underline heading */
-        .page-header {
-            color: #ffffff;
-            text-align: center;
-            font-size: 26px;
-            font-weight: 400;
-            margin-bottom: 40px;
-            letter-spacing: 0.5px;
-        }
+    .event-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
 
-        .page-header span {
-            border-bottom: 2px solid #ffffff;
-            padding-bottom: 4px;
-        }
-    </style>
+    .card-poster {
+      width: 100%;
+      height: 112px;
+      overflow: hidden;
+      background-color: #eaeaea;
+    }
+
+    .card-poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .date-section {
+      padding: 16px 14px;
+      text-align: center;
+      color: #1f4e8c;
+      font-size: 13.5px;
+      line-height: 1.45;
+      border-bottom: 1px dashed #b8c2cc;
+      background-color: #ffffff;
+    }
+
+    .title-section {
+      padding: 16px 14px 20px;
+      background-color: #f4f5f7;
+      color: #1a4983;
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    @media (max-width: 1300px) {
+      .event-card {
+        width: 210px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .event-card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <h1 class="page-header">
-        <span>Незабаром у Львівській політехніці</span>
-    </h1>
+  <section class="section-wrapper">
+    <div class="header-container">
+      <h2 class="section-title">Незабаром у Львівській політехніці</h2>
+    </div>
 
     <div class="cards-flex-container">
-        <!-- Card 1 -->
-        <div class="event-card">
-            <div class="card-image-wrapper">
-                <svg width="100%" height="100%" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#f37023;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#d4145a;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <rect width="200" height="120" fill="url(#grad1)"/>
-                    <circle cx="20" cy="20" r="8" fill="#fff" opacity="0.8"/>
-                    <circle cx="40" cy="20" r="8" fill="#fff" opacity="0.8"/>
-                    <text x="100" y="55" font-family="Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">ЯРМАРОК КАР'ЄРИ</text>
-                    <text x="100" y="72" font-family="Roboto, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">у Львівській політехніці</text>
-                    <rect x="35" y="82" width="130" height="20" fill="#ffd200" rx="3"/>
-                    <text x="100" y="96" font-family="Roboto, sans-serif" font-size="11" font-weight="bold" fill="#000" text-anchor="middle">11 листопада 2026</text>
-                </svg>
-            </div>
-            <div class="date-section">
-                ср., 11 листоп.,<br>10:00 – ср., 11<br>листоп., 15:00
-            </div>
-            <div class="title-section">
-                40-й Ярмарок кар'єри 2026 у Львівській політехніці
-            </div>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="event-card">
-            <div class="card-image-wrapper">
-                <svg width="100%" height="100%" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="200" height="120" fill="#e8dcc4"/>
-                    <path d="M 0,0 L 200,120 L 0,120 Z" fill="#d9c7a7" opacity="0.5"/>
-                    <!-- Decorative flora / book outline -->
-                    <path d="M 20,90 Q 40,70 60,90 T 100,90" fill="none" stroke="#8c7355" stroke-width="2"/>
-                    <text x="100" y="50" font-family="Georgia, serif" font-style="italic" font-size="16" font-weight="bold" fill="#3a2e2b" text-anchor="middle">Українське слово</text>
-                    <text x="100" y="75" font-family="Georgia, serif" font-style="italic" font-size="18" font-weight="bold" fill="#3a2e2b" text-anchor="middle">об'єднує</text>
-                </svg>
-            </div>
-            <div class="date-section">
-                ср., 11 листоп.,<br>15:00 – ср., 11<br>листоп., 18:00
-            </div>
-            <div class="title-section">
-                Українське слово об'єднує: Львівська політехніка запрошує студентів до участі в мовних конкурсах
-            </div>
+      <!-- Картка 1 -->
+      <a href="#event-1" class="event-card">
+        <div class="card-poster">
+          <img src="photos/spilno_dlya_predkiv_photo1.jpg" alt="Спільно для предків – Прикордоння: наша спільна спадщина">
         </div>
+        <div class="date-section">
+          пт., 13 листоп.,<br>
+          10:00 – сб., 14<br>
+          листоп., 15:00
+        </div>
+        <div class="title-section">
+          Міжнародна науково-практична конференція «Спільно для предків – Прикордоння: наша спільна спадщина. Роль волонтерства у збереженні культурної спадщини»
+        </div>
+      </a>
 
-        <!-- Card 3 -->
-        <div class="event-card">
-            <div class="card-image-wrapper">
-                <svg width="100%" height="100%" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="200" height="120" fill="#ffffff"/>
-                    <!-- Building illustration top background -->
-                    <rect x="0" y="0" width="200" height="50" fill="#4a6572"/>
-                    <text x="175" y="30" font-family="Roboto, sans-serif" font-size="16" font-weight="bold" fill="#fff">210</text>
-                    <circle cx="30" cy="75" r="15" fill="#34495e"/>
-                    <text x="30" y="80" font-family="Roboto, sans-serif" font-size="10" fill="#fff" text-anchor="middle">ЛП</text>
-                    <text x="115" y="70" font-family="Roboto, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50" text-anchor="middle">Круглий стіл</text>
-                    <line x1="60" y1="78" x2="170" y2="78" stroke="#bdc3c7" stroke-width="1"/>
-                    <rect x="60" y="92" width="110" height="15" fill="#2980b9"/>
-                    <text x="115" y="103" font-family="Roboto, sans-serif" font-size="8" fill="#fff" text-anchor="middle">12 ЛИСТОПАДА 2025</text>
-                </svg>
-            </div>
-            <div class="date-section">
-                чт., 12 листоп.,<br>14:00 – чт., 12<br>листоп., 18:00
-            </div>
-            <div class="title-section">
-                Круглий стіл «Історія вивчення обліково-економічних дисциплін у Львівській політехніці за період 1816–2025 років»
-            </div>
+      <!-- Картка 2 -->
+      <a href="#event-2" class="event-card">
+        <div class="card-poster">
+          <img src="photos/den_vidkritux_dverei_photo2.jpg" alt="День відкритих дверей кафедри РЕТС">
         </div>
+        <div class="date-section">
+          пт., 13 листоп.,<br>
+          11:00 – пт., 13<br>
+          листоп., 16:00
+        </div>
+        <div class="title-section">
+          Від радіолокації та навігації до інтелектуальних систем: кафедра РЕТС запрошує на День відкритих дверей
+        </div>
+      </a>
 
-        <!-- Card 4 -->
-        <div class="event-card">
-            <div class="card-image-wrapper">
-                <svg width="100%" height="100%" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="200" height="120" fill="#fffdfa"/>
-                    <rect x="5" y="5" width="190" height="110" fill="none" stroke="#d4af37" stroke-width="1"/>
-                    <!-- Classical building image placeholder -->
-                    <rect x="15" y="15" width="170" height="40" fill="#b89758"/>
-                    <path d="M 15 15 L 100 0 L 185 15 Z" fill="#8a6d3b"/>
-                    <text x="100" y="68" font-family="Roboto, sans-serif" font-size="8" font-weight="bold" fill="#555" text-anchor="middle">МІЖНАРОДНА КОНФЕРЕНЦІЯ</text>
-                    <text x="100" y="80" font-family="Roboto, sans-serif" font-size="9" font-weight="bold" fill="#111" text-anchor="middle">СПІЛЬНО ДЛЯ ПРЕДКІВ –</text>
-                    <text x="100" y="92" font-family="Roboto, sans-serif" font-size="9" font-weight="bold" fill="#111" text-anchor="middle">ПРИКОРДОННЯ: НАША</text>
-                    <text x="100" y="104" font-family="Roboto, sans-serif" font-size="9" font-weight="bold" fill="#111" text-anchor="middle">СПІЛЬНА СПАДЩИНА</text>
-                </svg>
-            </div>
-            <div class="date-section">
-                пт., 13 листоп.,<br>10:00 – сб., 14<br>листоп., 15:00
-            </div>
-            <div class="title-section">
-                Міжнародна науково-практична конференція «Спільно для предків – Прикордоння: наша спільна спадщина. Роль волонтерства у збереженні культурної спадщини»
-            </div>
+      <!-- Картка 3 -->
+      <a href="#event-3" class="event-card">
+        <div class="card-poster">
+          <img src="photos/gala_koncert_photo3.jpg" alt="Гала-концерт Окрилена піснею">
         </div>
+        <div class="date-section">
+          пт., 13 листоп.,<br>
+          17:00 – пт., 13<br>
+          листоп., 19:00
+        </div>
+        <div class="title-section">
+          «Окрилена піснею»: НТБ запрошує на гала-концерт академічного вокалу
+        </div>
+      </a>
 
-        <!-- Card 5 -->
-        <div class="event-card">
-            <div class="card-image-wrapper">
-                <svg width="100%" height="100%" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="200" height="120" fill="#2c3e50"/>
-                    <rect x="0" y="0" width="200" height="25" fill="#2980b9"/>
-                    <text x="100" y="17" font-family="Roboto, sans-serif" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">ДЕНЬ ВІДКРИТИХ ДВЕРЕЙ</text>
-                    <!-- Tech elements -->
-                    <circle cx="50" cy="65" r="20" fill="none" stroke="#1abc9c" stroke-width="2"/>
-                    <line x1="50" y1="40" x2="50" y2="90" stroke="#1abc9c" stroke-width="1"/>
-                    <line x1="25" y1="65" x2="75" y2="65" stroke="#1abc9c" stroke-width="1"/>
-                    <rect x="110" y="45" width="75" height="55" fill="#34495e" rx="3" stroke="#7f8c8d"/>
-                    <circle cx="130" cy="60" r="5" fill="#e74c3c"/>
-                    <circle cx="150" cy="60" r="5" fill="#f1c40f"/>
-                    <circle cx="170" cy="60" r="5" fill="#2ecc71"/>
-                </svg>
-            </div>
-            <div class="date-section">
-                пт., 13 листоп.,<br>11:00 – пт., 13<br>листоп., 16:00
-            </div>
-            <div class="title-section">
-                Від радіолокації та навігації до інтелектуальних систем: кафедра РЕТС запрошує на День відкритих дверей
-            </div>
+      <!-- Картка 4 -->
+      <a href="#event-4" class="event-card">
+        <div class="card-poster">
+          <img src="photos/molodijnii_forum_photo4.jpg" alt="XII Міжнародний молодіжний науковий форум Litteris et Artibus">
         </div>
+        <div class="date-section">
+          чт., 19 листоп.,<br>
+          09:00 – пт., 20<br>
+          листоп., 15:00
+        </div>
+        <div class="title-section">
+          XII Міжнародний молодіжний науковий форум «Litteris et Artibus» (LEA-2026)
+        </div>
+      </a>
 
-        <!-- Card 6 -->
-        <div class="event-card">
-            <div class="card-image-wrapper">
-                <svg width="100%" height="100%" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="200" height="120" fill="#5c6bc0"/>
-                    <!-- Main building vector -->
-                    <path d="M 0,40 Q 100,0 200,40 L 200,120 L 0,120 Z" fill="#3f51b5"/>
-                    <rect x="30" y="50" width="140" height="70" fill="#e8eaf6" opacity="0.9"/>
-                    <rect x="85" y="30" width="30" height="20" fill="#c5cae9"/>
-                    <circle cx="100" cy="70" r="12" fill="#d32f2f"/>
-                    <path d="M 94,65 L 106,65 L 100,77 Z" fill="#fff"/>
-                </svg>
-            </div>
-            <div class="date-section">
-                чт., 19 листоп.,<br>09:00 – пт., 20<br>листоп., 15:00
-            </div>
-            <div class="title-section">
-                XII Міжнародний молодіжний науковий форум «Litteris et Artibus» (LEA-2026)
-            </div>
+      <!-- Картка 5 -->
+      <a href="#event-5" class="event-card">
+        <div class="card-poster">
+          <img src="photos/meet_up_photo5.jpg" alt="Зустріч MeetUp з Христиною Теличко">
         </div>
+        <div class="date-section">
+          чт., 19 листоп.,<br>
+          13:00 – чт., 19<br>
+          листоп., 15:00
+        </div>
+        <div class="title-section">
+          Запрошуємо на зустріч MeetUp з Христиною Теличко, Competence Operations Lead в компанії N-iX
+        </div>
+      </a>
+
+      <!-- Картка 6 -->
+      <a href="#event-6" class="event-card">
+        <div class="card-poster">
+          <img src="photos/stydentska_praktuchna_photo6.jpg" alt="V Міжнародна студентська науково-практична конференція">
+        </div>
+        <div class="date-section">
+          чт., 26 листоп.,<br>
+          09:30 – чт., 26<br>
+          листоп., 18:00
+        </div>
+        <div class="title-section">
+          V Міжнародна студентська науково-практична конференція «Організаційні, правові та психолого-педагогічні аспекти реалізації професійної мобільності студентів у період війни: реалії та перспективи»
+        </div>
+      </a>
+
     </div>
+  </section>
 
 </body>
 </html>
