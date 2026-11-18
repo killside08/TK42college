@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Trivia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav aria-label="Головна навігація">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trivia">Trivia</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#scores">Scores</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 3.5 Розділ Home -->
+        <section id="home">
+            <h1>Ласкаво просимо до World Trivia!</h1>
+            <p>Перевірте свої знання у захопливих вікторинах з різних куточків світу. Змагайтеся з гравцями з усієї планети, відкривайте нові факти та очолюйте таблицю лідерів.</p>
+        </section>
+
+        <!-- 3.6 Розділ Trivia -->
+        <section id="trivia">
+            <h2>Trivia (Цікаві факти та вікторини)</h2>
+            
+            <article class="trivia-item">
+                <img src="photo/piramida.jpg" alt="Піраміди в Гізі">
+                <div>
+                    <h3>Загадки стародавнього світу</h3>
+                    <p>Чи знали ви, що Велика піраміда в Гізі залишалася найвищою спорудою у світі понад 3800 років? Перевірте свої знання про давні цивілізації.</p>
+                </div>
+            </article>
+
+            <article class="trivia-item">
+                <img src="photo/venera.jpg" alt="Планета Венера">
+                <div>
+                    <h3>Таємниці космосу та науки</h3>
+                    <p>Один день на Венері триває довше, ніж рік на цій планеті. Дізнайтеся більше неймовірних наукових фактів у нашій щоденній добірці.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- 3.7 Розділ Categories -->
+        <section id="categories">
+            <h2>Categories (Категорії вікторин)</h2>
+            <ul class="categories-list">
+                <li><a href="#history">Історія</a></li>
+                <li><a href="#science">Наука</a></li>
+                <li><a href="#geography">Географія</a></li>
+                <li><a href="#movies">Кіно та музика</a></li>
+                <li><a href="#sports">Спорт</a></li>
+            </ul>
+        </section>
+
+        <!-- 3.8 Таблиця результатів (Scores) -->
+        <section id="scores">
+            <h2>Scores (Таблиця результатів)</h2>
+            <table class="scores-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Country</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Олександр К.</td>
+                        <td>980</td>
+                        <td>Україна</td>
+                        <td>Наука</td>
+                        <td>2026-11-15</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Emily R.</td>
+                        <td>945</td>
+                        <td>Канада</td>
+                        <td>Історія</td>
+                        <td>2026-11-16</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Lukas M.</td>
+                        <td>910</td>
+                        <td>Німеччина</td>
+                        <td>Географія</td>
+                        <td>2026-11-17</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 3.10 Розділ Subscribe -->
+        <section id="subscribe">
+            <h2>Subscribe (Щоденна головоломка)</h2>
+            <p>Отримуйте нове завдання щоранку прямо на свою пошту!</p>
+            <button type="button" class="subscribe-btn" aria-label="Підписатися на Puzzle of the Day">
+                Puzzle of the Day
+            </button>
+        </section>
+
+        <!-- 3.9 Контактна форма -->
+        <section id="contact">
+            <h2>Contact (Зв'язатися з нами)</h2>
+            <p>Маєте ідеї для нових запитань чи знайшли помилку? Напишіть нам!</p>
+            
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Ім’я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 World Trivia. Усі права захищено. <span class="sr-only">Навчальний проєкт з веб-розробки.</span></p>
+    </footer>
+
+</body>
+</html>
